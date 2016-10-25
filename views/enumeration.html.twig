@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block title -%}
+    {{ model.name }}
+{%- endblock %}
+
+{% block content %}
+    <section>
+        <h2>Literals</h2>
+        <dl class="row">
+            {% for literal in model.children %}
+            <dt class="col-sm-3" id="{{ literal.xmiId }}">
+                <a class="name-ref name-enumerationLiteral" href="{{ literal.filename }}">{{ literal.name }}</a>
+            </dt>
+            <dd class="col-sm-9">{{ literal.comment }}</dd>
+            {% endfor %}
+        </dl>
+    </section>
+{% endblock %}

@@ -1,0 +1,54 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+if ($argc !== 3) {
+    echo 'Please provide a file to parse and an output dir';
+    exit(1);
+}
+
+$filename = $argv[1];
+$dest = realpath($argv[2]);
+
+if (!$dest) {
+    echo 'Output dir does not exist';
+    exit(2);
+}
+
+// Set up twig environment
+$loader = new \Twig_Loader_Filesystem(__DIR__ . '/../views');
+$twig = new \Twig_Environment($loader/*, ['cache' => __DIR__ . '/../var']*/);
+
+$parser = new \Moellers\XmiDoc\Loader();
+$global = $parser->loadXmi($filename);
+$models = $parser->flattenModels($global);
+
+$ids = array_combine(array_map(function (\Moellers\XmiDoc\Model $m) {
+    return $m->xmiId;
+}, $models), $models);
+ksort($ids);
+foreach ($models as $model) {
+    // Resolve specializations
+    foreach ($model->generalizations as $id => $g) {
+        $ids[$g]->specializations[] = $model;
+    }
+
+    // Resolve generalizations
+    $model->generalizations = array_map(function (string $ref) use ($ids) {
+       return $ids[$ref];
+    }, $model->generalizations);
+
+    // Resolve type
+    if ($model->type) $model->type = $ids[$model->type];
+
+    // Resolve default value
+    if ($model->defaultValue) {
+        $model->defaultValue = $ids[$model->defaultValue];
+    }
+}
+
+$renderer = new \Moellers\XmiDoc\Renderer($twig, $dest);
+$renderer->copyAssets(__DIR__ . '/../public');
+$renderer->renderGlobal($global);
+$renderer->renderIds($ids);

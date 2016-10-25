@@ -1,0 +1,20 @@
+<h1 class="name name-{{ model.class }}">
+    <span>{{ model.name }}</span>
+    {% if model.type %}<a href="{{ model.type.filename }}">:{{ model.type.name }}</a>{% endif %}
+</h1>
+<p>
+    <strong>{{ model.xmiType }}</strong>
+    <a class="model-id" href="/ids.html#{{ model.xmiId }}">#{{ model.xmiId }}</a>
+    {% if model.isReadOnly %}<span class="tag tag-danger">readOnly</span>{% endif %}
+</p>
+<p class="lead">{{ model.comment }}</p>
+<ol class="breadcrumb">
+    {% for parent in model.parents %}
+    <li class="breadcrumb-item">
+        <a class="name-ref name-{{ parent.class }}" href="{{ parent.filename }}">{{ parent.name }}</a>
+    </li>
+    {% endfor %}
+    <li class="breadcrumb-item active">
+        <span class="name-ref name-{{ model.class }}">{{ model.name }}</span>
+    </li>
+</ol>

@@ -1,0 +1,51 @@
+{% extends 'layout.html.twig' %}
+
+{% block title -%}
+    {{ model.name }}
+{%- endblock %}
+
+{% block content %}
+    {% if model.childrenOf('uml:Package') is not empty %}
+    <section>
+        <h2>Packages</h2>
+        <ul class="list-unstyled">
+            {% for package in model.childrenOf('uml:Package') %}
+            <li><a class="name-ref name-package" href="{{ package.filename }}">{{ package.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if model.childrenOf('uml:Class') is not empty %}
+    <section>
+        <h2>Classes</h2>
+        <ul class="list-unstyled">
+            {% for class in model.childrenOf('uml:Class') %}
+            <li><a class="name-ref name-class" href="{{ class.filename }}">{{ class.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if model.childrenOf('uml:Enumeration') is not empty %}
+    <section>
+        <h2>Enumerations</h2>
+        <ul class="list-unstyled">
+            {% for enumeration in model.childrenOf('uml:Enumeration') %}
+            <li><a class="name-ref name-enumeration" href="{{ enumeration.filename }}">{{ enumeration.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if model.childrenOf('uml:Association') is not empty %}
+    <section>
+        <h2>Associations</h2>
+        <ul class="list-unstyled">
+            {% for association in model.childrenOf('uml:Association') %}
+            <li><a class="name-ref name-association" href="{{ association.filename }}">{{ association.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+{% endblock %}

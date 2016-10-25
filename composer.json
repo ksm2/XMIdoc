@@ -1,0 +1,21 @@
+{
+    "name": "ksm2/xmi-doc",
+    "description": "XMI parser to generate HTML documentation",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Konstantin Simon Maria Möllers",
+            "email": "ksm.moellers@gmail.com"
+        }
+    ],
+    "bin": ["bin/xmidoc"],
+    "autoload": {
+        "psr-4": {
+            "Moellers\\XmiDoc\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^1.26"
+    }
+}

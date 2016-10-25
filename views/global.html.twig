@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+
+{% block title -%}
+    {{ model.name }}
+{%- endblock %}
+
+{% block header %}
+    <h1>{{ metadata.name }}</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">{{ model.name }}</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    {% if model.childrenOf('uml:Package') is not empty %}
+        <section>
+            <h2>Packages</h2>
+            <ul>
+                {% for package in model.childrenOf('uml:Package') %}
+                    <li><a class="name-ref name-package" href="{{ package.filename }}">{{ package.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+{% endblock %}

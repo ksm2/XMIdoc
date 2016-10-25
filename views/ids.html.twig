@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title -%}
+    IDs
+{%- endblock %}
+
+{% block header %}
+    <h1>IDs</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Global</a></li>
+        <li class="breadcrumb-item active">IDs</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <ul class="list-unstyled">
+            {% for model in ids %}
+                <li><a id="{{ model.xmiId }}" class="name-ref name-{{ model.class }}" href="{{ model.filename }}">#{{ model.xmiId }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
