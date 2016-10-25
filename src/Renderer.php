@@ -51,9 +51,9 @@ class Renderer
         }
     }
 
-    public function renderIds(array $ids)
+    public function renderIds(array $ids, array $metadata)
     {
-        $html = $this->twig->render('ids.html.twig', ['ids' => $ids]);
+        $html = $this->twig->render('ids.html.twig', ['ids' => $ids, 'metadata' => $metadata]);
         $filename = $this->dest . '/ids.html';
         file_put_contents($filename, $html);
     }
@@ -69,7 +69,7 @@ class Renderer
     public function render(Model $model, array $metadata, string $template)
     {
         $html = $this->twig->render($template, ['model' => $model, 'metadata' => $metadata]);
-        $filename = $this->dest . $model->filename;
+        $filename = $this->dest . '/' . $model->filename;
         if (!is_dir(dirname($filename))) {
             mkdir(dirname($filename));
         }

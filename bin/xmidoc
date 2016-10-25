@@ -3,13 +3,19 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-if ($argc !== 3) {
-    echo 'Please provide a file to parse and an output dir';
+$options = getopt('', [
+   'xmi:',
+   'dest:',
+   'base-href:',
+]);
+
+if (!array_key_exists('dest', $options) || !array_key_exists('xmi', $options)) {
+    echo 'Please provide an XMI file to parse and an output dir';
     exit(1);
 }
 
-$filename = $argv[1];
-$dest = realpath($argv[2]);
+$filename = $options['xmi'];
+$dest = realpath($options['dest']);
 
 if (!$dest) {
     echo 'Output dir does not exist';
@@ -23,6 +29,9 @@ $twig = new \Twig_Environment($loader/*, ['cache' => __DIR__ . '/../var']*/);
 $parser = new \Moellers\XmiDoc\Loader();
 $global = $parser->loadXmi($filename);
 $models = $parser->flattenModels($global);
+
+// Set base href
+if (array_key_exists('base-href', $options)) $global->metadata['baseHref'] = $options['base-href'];
 
 $ids = array_combine(array_map(function (\Moellers\XmiDoc\Model $m) {
     return $m->xmiId;
@@ -51,4 +60,4 @@ foreach ($models as $model) {
 $renderer = new \Moellers\XmiDoc\Renderer($twig, $dest);
 $renderer->copyAssets(__DIR__ . '/../public');
 $renderer->renderGlobal($global);
-$renderer->renderIds($ids);
+$renderer->renderIds($ids, $global->metadata);

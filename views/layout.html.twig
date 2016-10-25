@@ -2,8 +2,15 @@
 <html>
 <head>
     <title>{{ metadata.name }} – {% block title %}Untitled{% endblock %}</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
+
+    {% if metadata.baseHref %}
+        <base href="{{ metadata.baseHref }}">
+    {% else %}
+        <base href="/">
+    {% endif %}
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">

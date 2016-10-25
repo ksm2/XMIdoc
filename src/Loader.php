@@ -15,7 +15,7 @@ class Loader
         $xml = simplexml_load_file($filename, \SimpleXMLElement::class, 0, 'uml', true);
 
         $model = new Model('Global');
-        $model->filename = '/index.html';
+        $model->filename = 'index.html';
         $model->metadata = $xml->getNamespaces(true);
         $model->metadata['source'] = $filename;
         $model->metadata['name'] = basename($filename);
@@ -154,7 +154,17 @@ class Loader
 
     private function generateFilename(Model $model): string
     {
-        return '/' . $model->class . '/' . $model->xmiId . '.html';
+        $letter = $this->getShortLetter($model->class);
+        return $model->class . '/' . $letter . $model->xmiId . '.html';
+    }
+
+    private function getShortLetter($class)
+    {
+        switch ($class) {
+            case 'property': return 'Y';
+            case 'enumerationLiteral': return 'L';
+            default: return strtoupper($class[0]);
+        }
     }
 
     /**
