@@ -14,6 +14,7 @@
                 <li>
                     <a class="name-ref name-property" href="{{ property.filename }}"><strong>{{ property.name }}</strong></a>
                     <a href="{{ property.type.filename }}">:{{ property.type.name }}</a>
+                    {% if property.multiplicity %}<span>{{ property.multiplicity }}</span>{% endif %}
                     <span>{{ property.propertyHash }}</span>
                     {% if property.defaultValue %}
                         {% if property.defaultValue.filename %}

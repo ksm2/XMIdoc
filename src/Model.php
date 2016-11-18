@@ -30,6 +30,11 @@ class Model
     public $comment;
 
     /**
+     * @var string|null
+     */
+    public $multiplicity;
+
+    /**
      * @var Model[]
      */
     public $children;

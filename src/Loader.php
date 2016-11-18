@@ -160,6 +160,26 @@ class Loader implements XmiHrefResolver
             }
         }
 
+        $min = null;
+        $lowerValue = $property->getElement('lowerValue');
+        if ($lowerValue) {
+            $min = $lowerValue->getString('value', '0');
+        }
+
+        $max = null;
+        $upperValue = $property->getElement('upperValue');
+        if ($upperValue) {
+            $max = $upperValue->getString('value');
+        }
+
+        if ($min !== null && $max !== null) {
+            $model->multiplicity = "[$min..$max]";
+        } elseif ($max !== null) {
+            $model->multiplicity = "[0..$max]";
+        } elseif ($min !== null) {
+            $model->multiplicity = "[$min..1]";
+        }
+
         return $model;
     }
 
