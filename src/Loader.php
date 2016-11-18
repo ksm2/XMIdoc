@@ -81,10 +81,14 @@ class Loader implements XmiHrefResolver
                 return $this->loadAssociation($element, $model);
             case 'uml:Property':
                 return $this->loadProperty($element, $model);
+            case 'uml:Operation':
+                return $this->loadOperation($element, $model);
             case 'uml:DataType':
                 return $this->loadDataType($element, $model);
             case 'uml:EnumerationLiteral':
                 return $model;
+            case 'uml:Parameter':
+                return $this->loadParameter($element, $model);
             case 'uml:PrimitiveType':
                 return $model;
             case 'uml:Extension':
@@ -107,14 +111,10 @@ class Loader implements XmiHrefResolver
 
     public function loadClass(XmiElement $class, Model $model): Model
     {
-        $model->children = [];
-        foreach ($class->getElements('ownedAttribute') as $attrib) {
-            $child = $this->loadElement($attrib);
-            $model->children[] = $child;
-        }
+        $model = $this->loadClassifier($class, $model);
 
-        foreach ($class->getElements('generalization') as $generalization) {
-            $model->generalizations[] = $this->loadElement($generalization->getElement('general'));
+        foreach ($class->getElements('ownedOperation') as $operation) {
+            $model->children[] = $this->loadElement($operation);
         }
 
         return $model;
@@ -122,16 +122,7 @@ class Loader implements XmiHrefResolver
 
     public function loadDataType(XmiElement $dataType, Model $model): Model
     {
-        $model->children = [];
-        foreach ($dataType->getElements('ownedAttribute') as $attrib) {
-            $model->children[] = $this->loadElement($attrib);
-        }
-
-        foreach ($dataType->getElements('generalization') as $generalization) {
-            $model->generalizations[] = $this->loadElement($generalization->getElement('general'));
-        }
-
-        return $model;
+        return $this->loadClassifier($dataType, $model);
     }
 
     public function loadEnumeration(XmiElement $enumeration, Model $model): Model
@@ -167,6 +158,44 @@ class Loader implements XmiHrefResolver
             } elseif ($defaultValue->has('instance')) {
                 $model->defaultValue = $defaultValue->getString('instance');
             }
+        }
+
+        return $model;
+    }
+
+    public function loadOperation(XmiElement $operation, Model $model): Model
+    {
+        $model->isQuery = $operation->getBool('isQuery');
+
+        $model->children = [];
+        foreach ($operation->getElements('ownedParameter') as $parameter) {
+            $direction = $parameter->getString('direction');
+            if ('return' === $direction) {
+                $model->type = $this->loadElement($parameter->getElement('type'));
+                continue;
+            }
+            $model->children[] = $this->loadElement($parameter);
+        }
+
+        return $model;
+    }
+
+    public function loadParameter(XmiElement $element, Model $model): Model
+    {
+        $model->type = $this->loadElement($element->getElement('type'));
+
+        return $model;
+    }
+
+    public function loadClassifier(XmiElement $classifier, Model $model): Model
+    {
+        $model->children = [];
+        foreach ($classifier->getElements('ownedAttribute') as $attribute) {
+            $model->children[] = $this->loadElement($attribute);
+        }
+
+        foreach ($classifier->getElements('generalization') as $generalization) {
+            $model->generalizations[] = $this->loadElement($generalization->getElement('general'));
         }
 
         return $model;
@@ -212,6 +241,7 @@ class Loader implements XmiHrefResolver
             case 'property': return 'Y';
             case 'enumerationLiteral': return 'L';
             case 'primitiveType': return 'T';
+            case 'parameter': return 'M';
             default: return strtoupper($class[0]);
         }
     }

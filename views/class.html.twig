@@ -2,10 +2,6 @@
 
 {% from 'macros.html.twig' import generalizations, specializations %}
 
-{% block title -%}
-    {{ model.name }}
-{%- endblock %}
-
 {% block content %}
     {{ generalizations(model) }}
     {{ specializations(model) }}
@@ -27,6 +23,37 @@
                         {% endif %}
                     {% endif %}
                     <p class="comment">{{ property.comment }}</p>
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+    {% if model.childrenOf('uml:Operation') is not empty %}
+        <section>
+            <h2>Operations</h2>
+            <ul class="list-unstyled">
+            {% for operation in model.childrenOf('uml:Operation') %}
+                <li>
+                    <a class="name-ref name-{{ operation.class }}" href="{{ operation.filename }}"><strong>{{ operation.name }}</strong></a>
+                    <span>(</span>
+                    {% for param in operation.children %}
+                        <span>{{  loop.first ? '' : ',' }}</span>
+                        <span>{{ param.direction }}</span>
+                        <strong>{{ param.name }}</strong>
+                        <a href="{{ param.type.filename }}">:{{ param.type.name }}</a>
+                    {% endfor %}
+                    <span>)</span>
+                    <a href="{{ operation.type.filename }}">:{{ operation.type.name }}</a>
+                    {#<span>{{ operation.operationHash }}</span>#}
+                    {#{% if operation.defaultValue %}#}
+                        {#{% if operation.defaultValue.filename %}#}
+                            {#<a href="{{ operation.defaultValue.filename }}">={{ operation.defaultValue.name }}</a>#}
+                        {#{% else %}#}
+                            {#<span>={{ operation.defaultValue }}</span>#}
+                        {#{% endif %}#}
+                    {#{% endif %}#}
+                    <p class="comment">{{ operation.comment }}</p>
                 </li>
             {% endfor %}
             </ul>

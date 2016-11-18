@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <section>
+        <h2>Parameters</h2>
+        <dl class="row">
+            {% for parameter in model.children %}
+                <dt class="col-sm-3" id="{{ parameter.xmiId }}">
+                    <a class="name-ref name-{{ parameter.class }}" href="{{ parameter.filename }}">{{ parameter.name }}</a>
+                </dt>
+                <dd class="col-sm-9">
+                    <a class="name-ref name-{{ parameter.type.class }}" href="{{ parameter.type.filename }}">:{{ parameter.type.name }}</a>
+                </dd>
+            {% endfor %}
+        </dl>
+    </section>
+{% endblock %}

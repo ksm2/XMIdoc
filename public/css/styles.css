@@ -56,7 +56,7 @@ a.model-id {
 }
 .name-enumerationLiteral:before {
     content: 'L';
-    background-color: #96411b;
+    background-color: #f9bf3b;
 }
 .name-association:before {
     content: 'A';
@@ -69,6 +69,14 @@ a.model-id {
 .name-dataType:before {
     content: 'D';
     background-color: #e67e22;
+}
+.name-operation:before {
+    content: 'O';
+    background-color: #96411b;
+}
+.name-parameter:before {
+    content: 'M';
+    background-color: #96411b;
 }
 
 .comment {
