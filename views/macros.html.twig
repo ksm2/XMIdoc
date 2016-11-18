@@ -1,0 +1,36 @@
+{% macro generalizations(model) %}
+    {% import _self as self %}
+    {% if model.generalizations is not empty %}
+        <section>
+            <h2>Generalizations</h2>
+            {{ self.generalization_tree(model.generalizations) }}
+        </section>
+    {% endif %}
+{% endmacro %}
+
+{% macro specializations(model) %}
+    {% if model.specializations is not empty %}
+        <section>
+            <h2>Specializations</h2>
+            <ul class="list-unstyled">
+                {% for class in model.specializations %}
+                    <li><a class="name-ref name-{{ class.class }}" href="{{ class.filename }}">{{ class.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+{% endmacro %}
+
+{% macro generalization_tree(generalizations) %}
+    {% import _self as self %}
+    <ul>
+        {% for class in generalizations %}
+            <li>
+                <a class="name-ref name-{{ class.class }}" href="{{ class.filename }}">{{ class.name }}</a>
+                {% if class.generalizations is not empty %}
+                    {{ self.generalization_tree(class.generalizations) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

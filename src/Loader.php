@@ -84,9 +84,9 @@ class Loader implements XmiHrefResolver
                 return $this->loadAssociation($element, $model);
             case 'uml:Property':
                 return $this->loadProperty($element, $model);
-            case 'uml:EnumerationLiteral':
-                return $model;
             case 'uml:DataType':
+                return $this->loadDataType($element, $model);
+            case 'uml:EnumerationLiteral':
                 return $model;
             case 'uml:PrimitiveType':
                 return $model;
@@ -123,6 +123,20 @@ class Loader implements XmiHrefResolver
         return $model;
     }
 
+    public function loadDataType(XmiElement $dataType, Model $model): Model
+    {
+        $model->children = [];
+        foreach ($dataType->getElements('ownedAttribute') as $attrib) {
+            $model->children[] = $this->loadElement($attrib);
+        }
+
+        foreach ($dataType->getElements('generalization') as $generalization) {
+            $model->generalizations[] = $this->loadElement($generalization->getElement('general'));
+        }
+
+        return $model;
+    }
+
     public function loadEnumeration(XmiElement $enumeration, Model $model): Model
     {
         $model->children = [];
@@ -142,7 +156,8 @@ class Loader implements XmiHrefResolver
     {
         $model->isReadOnly = $property->getBool('isReadOnly');
         $model->isDerived = $property->getBool('isDerived');
-        $model->type = $this->loadElement($property->getElement('type'));
+        $type = $property->getElement('type');
+        $model->type = $this->loadElement($type);
 
         if ($model->isDerived) {
             $model->name = '/' . $model->name;
@@ -150,7 +165,9 @@ class Loader implements XmiHrefResolver
 
         $defaultValue = $property->getElement('defaultValue');
         if ($defaultValue) {
-            if ($defaultValue->has('instance')) {
+            if ($defaultValue->has('value')) {
+                $model->defaultValue = $defaultValue->getString('value');
+            } elseif ($defaultValue->has('instance')) {
                 $model->defaultValue = $defaultValue->getString('instance');
             }
         }

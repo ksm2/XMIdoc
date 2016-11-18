@@ -61,6 +61,9 @@ class XmiFile
 
     public function getElementById(string $id): XmiElement
     {
+        if (empty($id) || !isset($this->ids[$id])) {
+            throw new \LogicException('There is no element with XMI id #' . $id);
+        }
         return $this->ids[$id];
     }
 

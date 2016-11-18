@@ -1,1 +1,31 @@
 {% extends 'layout.html.twig' %}
+
+{% from 'macros.html.twig' import generalizations, specializations %}
+
+{% block content %}
+    {{ generalizations(model) }}
+    {{ specializations(model) }}
+
+    {% if model.childrenOf('uml:Property') is not empty %}
+        <section>
+            <h2>Attributes</h2>
+            <ul class="list-unstyled">
+                {% for property in model.childrenOf('uml:Property') %}
+                    <li>
+                        <a class="name-ref name-property" href="{{ property.filename }}"><strong>{{ property.name }}</strong></a>
+                        <a href="{{ property.type.filename }}">:{{ property.type.name }}</a>
+                        <span>{{ property.propertyHash }}</span>
+                        {% if property.defaultValue %}
+                            {% if property.defaultValue.filename %}
+                                <a href="{{ property.defaultValue.filename }}">={{ property.defaultValue.name }}</a>
+                            {% else %}
+                                <span>={{ property.defaultValue }}</span>
+                            {% endif %}
+                        {% endif %}
+                        <p class="comment">{{ property.comment }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+{% endblock %}

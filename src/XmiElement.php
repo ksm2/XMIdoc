@@ -55,30 +55,32 @@ class XmiElement
 
         /** @var \SimpleXMLElement $child */
         foreach ($element->children() as $child) {
+            $childXmiAttr = $child->attributes('xmi', true);
             $name = $child->getName();
-            if ($child->count() === 0) {
-                if ($child['href']) {
-                    $this->attr[$name] = new XmiHref($child);
-                    continue;
-                }
 
-                if ($child->attributes('xmi', true)['idref']) {
-                    $this->attr[$name] = new XmiIdref($child);
-                    continue;
-                }
-
-                $this->attr[$name] = (string) $child;
+            if ($childXmiAttr['id']) {
+                if (!isset($this->attr[$name])) $this->attr[$name] = [];
+                $this->attr[$name][] = new XmiElement($file, $this, $child, $package);
                 continue;
             }
 
-            if (!isset($this->attr[$name])) $this->attr[$name] = [];
-            $this->attr[$name][] = new XmiElement($file, $this, $child, $package);
-        }
+            if ($child['href']) {
+                $this->attr[$name] = new XmiHref($child);
+                continue;
+            }
 
-        foreach ($element->xpath('*[@xmi:id]') as $child) {
-            $name = $child->getName();
-            if (!isset($this->attr[$name])) $this->attr[$name] = [];
-            $this->attr[$name][] = new XmiElement($file, $this, $child, $package);
+            if ($childXmiAttr['idref']) {
+                $this->attr[$name] = new XmiIdref($child);
+                continue;
+            }
+
+            $text = (string)$child;
+            if ($child->count() === 0) {
+                $this->attr[$name] = $text;
+                continue;
+            }
+
+            throw new \LogicException('Could not interpret <' . $name . '/> in <' . $element->getName() . '/>!');
         }
     }
 
@@ -103,7 +105,6 @@ class XmiElement
     {
         if (!$this->has($attr)) return $default;
         if (!is_string($this->attr[$attr])) {
-            var_dump($this->attr[$attr]);
             throw new \LogicException($attr . ' is not a string: ' . gettype($this->attr[$attr]));
         }
         return (string) $this->attr[$attr];
@@ -143,6 +144,9 @@ class XmiElement
     {
         if (!$this->has($attr)) return $default;
         $value = $this->attr[$attr];
+        if (!is_array($value)) {
+            return $default;
+        }
 
         return $value;
     }
