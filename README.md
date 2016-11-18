@@ -7,6 +7,7 @@ A tool to generate an API documentation out of XMI files https://ksm2.github.io/
 | ------------- | --------- | ------- |
 | `--dest`      | *string*  | Destination directory where output will be put |
 | `--base-href` | *?string* | An optional `<base href="...">` to set in the HTML headers |
+| `--title`     | *?string* | An optional title for the documentation, defaults to “XMI Documentation” |
 
 ## Example Usage
 The following command reads out the XMI specification file from *http://www.omg.org/spec/UML/20131001/UML.xmi* and puts all content into *doc*.

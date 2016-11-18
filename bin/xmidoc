@@ -6,12 +6,18 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $urls = [];
 $dest = null;
 $baseHref = '/';
+$title = 'XMI Documentation';
 for ($i = 1; $i < $argc; $i += 1) {
     $opt = $argv[$i];
     switch ($opt) {
         case '--base-href': {
             $i += 1;
             $baseHref = $argv[$i];
+            continue;
+        }
+        case '--title': {
+            $i += 1;
+            $title = $argv[$i];
             continue;
         }
         case '--dest': {
@@ -55,7 +61,10 @@ $models = $parser->flattenModels();
 
 
 // Set base href
-$global->metadata['baseHref'] = $baseHref;
+$metadata = [
+    'baseHref' => $baseHref,
+    'title' => $title,
+];
 
 $ids = array_combine(array_map(function (\Moellers\XmiDoc\Model $m) {
     return $m->href;
@@ -70,6 +79,6 @@ foreach ($models as $model) {
 
 $renderer = new \Moellers\XmiDoc\Renderer($twig, $dest);
 $renderer->copyAssets(__DIR__ . '/../public');
-$renderer->renderGlobal($global);
-$renderer->renderElements($models, $global->metadata);
-$renderer->renderIds($ids, $global->metadata);
+$renderer->renderGlobal($global, $metadata);
+$renderer->renderElements($models, $metadata);
+$renderer->renderIds($ids, $metadata);

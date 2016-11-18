@@ -55,11 +55,6 @@ class Model
     public $filename;
 
     /**
-     * @var array|null
-     */
-    public $metadata;
-
-    /**
      * @var bool
      */
     public $isReadOnly;

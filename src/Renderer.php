@@ -43,9 +43,9 @@ class Renderer
         }
     }
 
-    public function renderGlobal(Model $model)
+    public function renderGlobal(Model $model, array $metadata)
     {
-        $this->render($model, $model->metadata, 'global.html.twig');
+        $this->render($model, $metadata, 'global.html.twig');
     }
 
     public function renderIds(array $ids, array $metadata)

@@ -17,9 +17,6 @@ class Loader implements XmiHrefResolver
         $model = new Model('Global');
         $model->filename = 'index.html';
         $model->name = 'Index';
-        $model->metadata = [
-            'name' => 'OMG XMI Documentation',
-        ];
 
         $this->global = $model;
     }
