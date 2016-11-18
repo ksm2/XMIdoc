@@ -16,7 +16,7 @@
     <section>
         <ul class="list-unstyled">
             {% for model in ids %}
-                <li><a id="{{ model.xmiId }}" class="name-ref name-{{ model.class }}" href="{{ model.filename }}">#{{ model.xmiId }}</a></li>
+                <li><a id="{{ model.xmiId }}" class="name-ref name-{{ model.class }}" href="{{ model.filename }}">{{ model.href }}</a></li>
             {% endfor %}
         </ul>
     </section>

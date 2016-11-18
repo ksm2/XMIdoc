@@ -4,10 +4,13 @@
 </h1>
 <p>
     <strong>{{ model.xmiType }}</strong>
-    <a class="model-id" href="ids.html#{{ model.xmiId }}">#{{ model.xmiId }}</a>
+    <a class="model-id" href="ids.html#{{ model.xmiId }}">{{ model.href }}</a>
     {% if model.isReadOnly %}<span class="tag tag-danger">readOnly</span>{% endif %}
 </p>
 <p class="lead">{{ model.comment }}</p>
+{% if model.URI %}
+<p class="lead">URI: <a href="{{ model.URI }}">{{ model.URI }}</a></p>
+{% endif %}
 <ol class="breadcrumb">
     {% for parent in model.parents %}
     <li class="breadcrumb-item">

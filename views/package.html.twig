@@ -27,6 +27,28 @@
     </section>
     {% endif %}
 
+    {% if model.childrenOf('uml:DataType') is not empty %}
+    <section>
+        <h2>Data Types</h2>
+        <ul class="list-unstyled">
+            {% for dataType in model.childrenOf('uml:DataType') %}
+            <li><a class="name-ref name-dataType" href="{{ dataType.filename }}">{{ dataType.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if model.childrenOf('uml:PrimitiveType') is not empty %}
+    <section>
+        <h2>Primitive Types</h2>
+        <ul class="list-unstyled">
+            {% for primitiveType in model.childrenOf('uml:PrimitiveType') %}
+            <li><a class="name-ref name-primitiveType" href="{{ primitiveType.filename }}">{{ primitiveType.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
     {% if model.childrenOf('uml:Enumeration') is not empty %}
     <section>
         <h2>Enumerations</h2>

@@ -62,6 +62,14 @@ a.model-id {
     content: 'A';
     background-color: #2ecc71;
 }
+.name-primitiveType:before {
+    content: 'T';
+    background-color: #f62496;
+}
+.name-dataType:before {
+    content: 'D';
+    background-color: #e67e22;
+}
 
 .comment {
     font-style: italic;

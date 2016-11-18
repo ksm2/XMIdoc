@@ -1,13 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>{{ metadata.name }} – {% block title %}Untitled{% endblock %}</title>
+    <title>{{ metadata.name }} – {% block title %}{{ model.name }}{% endblock %}</title>
 
-    {% if metadata.baseHref %}
-        <base href="{{ metadata.baseHref }}">
-    {% else %}
-        <base href="/">
-    {% endif %}
+    <base href="{{ metadata.baseHref }}">
 
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">

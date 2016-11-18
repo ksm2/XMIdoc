@@ -46,9 +46,6 @@ class Renderer
     public function renderGlobal(Model $model)
     {
         $this->render($model, $model->metadata, 'global.html.twig');
-        foreach ($model->children as $child) {
-            $this->renderElement($child, $model->metadata);
-        }
     }
 
     public function renderIds(array $ids, array $metadata)
@@ -56,6 +53,13 @@ class Renderer
         $html = $this->twig->render('ids.html.twig', ['ids' => $ids, 'metadata' => $metadata]);
         $filename = $this->dest . '/ids.html';
         file_put_contents($filename, $html);
+    }
+
+    public function renderElements(array $models, array $metadata)
+    {
+        foreach ($models as $model) {
+            $this->renderElement($model, $metadata);
+        }
     }
 
     private function renderElement(Model $model, array $metadata)

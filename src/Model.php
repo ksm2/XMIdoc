@@ -80,6 +80,16 @@ class Model
     public $type;
 
     /**
+     * @var string
+     */
+    public $package;
+
+    /**
+     * @var string
+     */
+    public $href;
+
+    /**
      * @param string $type
      * @return Model[]
      */
