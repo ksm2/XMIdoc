@@ -77,7 +77,12 @@ foreach ($models as $model) {
     }
 }
 
-$renderer = new \Moellers\XmiDoc\Renderer($twig, $dest);
+$tsd = new \Moellers\XmiDoc\Renderer\TsdRenderer($twig, $dest);
+foreach ($global->children as $package) {
+    $tsd->renderPackage($package);
+}
+
+$renderer = new \Moellers\XmiDoc\Renderer\HtmlRenderer($twig, $dest);
 $renderer->copyAssets(__DIR__ . '/../public');
 $renderer->renderGlobal($global, $metadata);
 $renderer->renderElements($models, $metadata);

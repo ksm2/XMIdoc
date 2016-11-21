@@ -90,6 +90,16 @@ class Model
     public $href;
 
     /**
+     * @var string
+     */
+    public $lower;
+
+    /**
+     * @var string
+     */
+    public $upper;
+
+    /**
      * @param string $type
      * @return Model[]
      */

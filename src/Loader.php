@@ -146,10 +146,10 @@ class Loader implements XmiHrefResolver
         $model->isDerived = $property->getBool('isDerived');
         $type = $property->getElement('type');
         $model->type = $this->loadElement($type);
-
-        if ($model->isDerived) {
-            $model->name = '/' . $model->name;
-        }
+//
+//        if ($model->isDerived) {
+//            $model->name = '/' . $model->name;
+//        }
 
         $defaultValue = $property->getElement('defaultValue');
         if ($defaultValue) {
@@ -160,24 +160,25 @@ class Loader implements XmiHrefResolver
             }
         }
 
-        $min = null;
+        $min = '1';
         $lowerValue = $property->getElement('lowerValue');
         if ($lowerValue) {
             $min = $lowerValue->getString('value', '0');
         }
 
-        $max = null;
+        $max = '1';
         $upperValue = $property->getElement('upperValue');
         if ($upperValue) {
             $max = $upperValue->getString('value');
         }
 
-        if ($min !== null && $max !== null) {
+        $model->lower = $min;
+        $model->upper = $max;
+
+        if ($min === $max) {
             $model->multiplicity = "[$min..$max]";
-        } elseif ($max !== null) {
-            $model->multiplicity = "[0..$max]";
-        } elseif ($min !== null) {
-            $model->multiplicity = "[$min..1]";
+        } else {
+            $model->multiplicity = "[$max]";
         }
 
         return $model;

@@ -1,47 +1,11 @@
 <?php
 
-namespace Moellers\XmiDoc;
+namespace Moellers\XmiDoc\Renderer;
 
-class Renderer
+use Moellers\XmiDoc\Model;
+
+class HtmlRenderer extends AbstractRenderer
 {
-    /**
-     * @var \Twig_Environment
-     */
-    private $twig;
-
-    /**
-     * @var string
-     */
-    private $dest;
-
-    /**
-     * XmiRenderer constructor.
-     * @param \Twig_Environment $twig
-     * @param string $dest
-     */
-    public function __construct(\Twig_Environment $twig, string $dest)
-    {
-        $this->twig = $twig;
-        $this->dest = $dest;
-    }
-
-    public function copyAssets($source)
-    {
-        $dest = $this->dest;
-        foreach (
-            $iterator = new \RecursiveIteratorIterator(
-                new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS),
-                \RecursiveIteratorIterator::SELF_FIRST) as $item
-        ) {
-            if ($item->isDir()) {
-                if (!is_dir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName())) {
-                    mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
-                }
-            } else {
-                copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
-            }
-        }
-    }
 
     public function renderGlobal(Model $model, array $metadata)
     {

@@ -1,0 +1,54 @@
+{% macro type(type) %}
+{%- if type.href == 'http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean' -%}
+boolean
+{%- elseif type.href == 'http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String' -%}
+string
+{%- elseif type.href == 'http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer' -%}
+number
+{%- elseif type.href == 'http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#UnlimitedNatural' -%}
+number
+{%- elseif type.href == 'http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Real' -%}
+number
+{%- else -%}
+{% for parent in type.parents %}{{ loop.first ? '' : parent.name ~ '.' }}{% endfor %}{{- type.name -}}
+{%- endif -%}
+{% endmacro %}
+
+{% macro package(model) %}
+{%- import _self as macros %}
+namespace {{ model.name }} {
+{% for package in model.childrenOf('uml:Package') %}
+{{ macros.package(package) }}
+{% endfor %}
+
+{% for enumeration in model.childrenOf('uml:Enumeration') %}
+{{ macros.enumeration(enumeration) }}
+{% endfor %}
+
+{% for class in model.childrenOf('uml:Class') %}
+{{ macros.class(class) }}
+{% endfor %}
+}
+{% endmacro %}
+
+{% macro class(model) %}
+{%- import _self as macros %}
+interface {{ model.name }}{% if model.generalizations is not empty %} extends {% for class in model.generalizations %}{{ macros.type(class) }}{{ loop.last ? '' : ', ' }}{% endfor %}{% endif %} {
+{% for property in model.childrenOf('uml:Property') %}
+    {{ property.name }}{% if property.lower == '0' %}?{% endif %}: {{ macros.type(property.type) }}{% if property.upper > 1 or property.upper == '*' %}[]{% endif %};
+{% endfor %}
+}
+{% endmacro %}
+
+{% macro enumeration(model) %}
+{%- import _self as macros %}
+enum {{ model.name }} {
+{% for literal in model.childrenOf('uml:EnumerationLiteral') %}
+    {{ literal.name }},
+{% endfor %}
+}
+{% endmacro %}
+
+{% import _self as macros %}
+
+{{ macros.package(model) }}
