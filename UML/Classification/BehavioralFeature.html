@@ -1,0 +1,262 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – BehavioralFeature</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">BehavioralFeature</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A BehavioralFeature is a feature of a Classifier that specifies an aspect of the behavior of its instances.  A BehavioralFeature is implemented (realized) by a Behavior. A BehavioralFeature specifies that a Classifier will respond to a designated request by invoking its implementing method.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#BehavioralFeature">http://www.omg.org/spec/UML/20131001/UML.xmi#BehavioralFeature</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/Classification.html">Classification</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">BehavioralFeature</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/Classification/Feature.html">Feature</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul>
+    </section>
+    
+    <section>
+      <h2>Specializations</h2>
+      <ul class="list-unstyled">
+        
+          <li class="name-ref name-class"><a href="UML/Classification/Operation.html">Operation</a>
+          <li class="name-ref name-class"><a href="UML/SimpleClassifiers/Reception.html">Reception</a>    
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">concurrency</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/Classification/CallConcurrencyKind.html">:CallConcurrencyKind</a>
+            <span>[1..1]</span>
+             
+              <a href="UML/Classification/CallConcurrencyKind/sequential.html">=sequential</a>
+            
+            
+            
+              <p class="comment">Specifies the semantics of concurrent calls to the same passive instance (i.e., an instance originating from a Class with isActive being false). Active instances control access to their own BehavioralFeatures.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isAbstract</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=false</span>
+            
+            
+            
+              <p class="comment">If true, then the BehavioralFeature does not have an implementation, and one must be supplied by a more specific Classifier. If false, the BehavioralFeature must have an implementation in the Classifier or one must be inherited.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">method</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Behavior.html">:Behavior</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_method_specification.html">A_method_specification</a>
+            
+              <p class="comment">A Behavior that implements the BehavioralFeature. There may be at most one Behavior for a particular pairing of a Classifier (as owner of the Behavior) and a BehavioralFeature (as specification of the Behavior).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">ownedParameter</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Parameter.html">:Parameter</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_ownedParameter_ownerFormalParam.html">A_ownedParameter_ownerFormalParam</a>
+            
+              <p class="comment">The ordered set of formal Parameters of this BehavioralFeature.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">ownedParameterSet</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/ParameterSet.html">:ParameterSet</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_ownedParameterSet_behavioralFeature.html">A_ownedParameterSet_behavioralFeature</a>
+            
+              <p class="comment">The ParameterSets owned by this BehavioralFeature.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">raisedException</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Type.html">:Type</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_raisedException_behavioralFeature.html">A_raisedException_behavioralFeature</a>
+            
+              <p class="comment">The Types representing exceptions that may be raised during an invocation of this BehavioralFeature.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">isDistinguishableFrom</strong>
+            <strong>(</strong>
+            
+              <strong>n</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/NamedElement.html">:NamedElement</a>
+              
+              <strong>,</strong>
+              <strong>ns</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Namespace.html">:Namespace</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isDistinguishableFrom() determines whether two BehavioralFeatures may coexist in the same Namespace. It specifies that they must have different signatures.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">inputParameters</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Parameter.html">:Parameter</a>
+            
+              <p class="comment">The ownedParameters with direction in and inout.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">outputParameters</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Parameter.html">:Parameter</a>
+            
+              <p class="comment">The ownedParameters with direction out, inout, or return.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

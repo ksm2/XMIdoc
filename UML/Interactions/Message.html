@@ -1,0 +1,259 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – Message</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">Message</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A Message defines a particular communication between Lifelines of an Interaction.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#Message">http://www.omg.org/spec/UML/20131001/UML.xmi#Message</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/Interactions.html">Interactions</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">Message</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul>
+    </section>
+    
+    
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">argument</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Values/ValueSpecification.html">:ValueSpecification</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Interactions/A_argument_message.html">A_argument_message</a>
+            
+              <p class="comment">The arguments of the Message.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">connector</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StructuredClassifiers/Connector.html">:Connector</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Interactions/A_connector_message.html">A_connector_message</a>
+            
+              <p class="comment">The Connector on which this Message is sent.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">interaction</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Interactions/Interaction.html">:Interaction</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Interactions/A_message_interaction.html">A_message_interaction</a>
+            
+              <p class="comment">The enclosing Interaction owning the Message.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">messageKind</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/Interactions/MessageKind.html">:MessageKind</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">The derived kind of the Message (complete, lost, found, or unknown).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">messageSort</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/Interactions/MessageSort.html">:MessageSort</a>
+            <span>[1..1]</span>
+             
+              <a href="UML/Interactions/MessageSort/synchCall.html">=synchCall</a>
+            
+            
+            
+              <p class="comment">The sort of communication reflected by the Message.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">receiveEvent</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Interactions/MessageEnd.html">:MessageEnd</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Interactions/A_receiveEvent_endMessage.html">A_receiveEvent_endMessage</a>
+            
+              <p class="comment">References the Receiving of the Message.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">sendEvent</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Interactions/MessageEnd.html">:MessageEnd</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Interactions/A_sendEvent_endMessage.html">A_sendEvent_endMessage</a>
+            
+              <p class="comment">References the Sending of the Message.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">signature</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/NamedElement.html">:NamedElement</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Interactions/A_signature_message.html">A_signature_message</a>
+            
+              <p class="comment">The signature of the Message is the specification of its content. It refers either an Operation or a Signal.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">messageKind</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/Interactions/MessageKind.html">:MessageKind</a>
+            
+              <p class="comment">This query returns the MessageKind value for this Message.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isDistinguishableFrom</strong>
+            <strong>(</strong>
+            
+              <strong>n</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/NamedElement.html">:NamedElement</a>
+              
+              <strong>,</strong>
+              <strong>ns</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Namespace.html">:Namespace</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isDistinguishableFrom() specifies that any two Messages may coexist in the same Namespace, regardless of their names.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

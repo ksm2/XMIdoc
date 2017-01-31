@@ -1,0 +1,279 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – Style</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">Style</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">Style contains formatting properties that affect the appearance or style of graphical elements.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#Style">http://www.omg.org/spec/DD/20131001/DG.xmi#Style</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="DG.html">DG</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">Style</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    
+    
+    
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">fill</strong>
+            &nbsp;<a class="name-ref name-class" href="DG/Fill.html">:Fill</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="DG/A_fill_style.html">A_fill_style</a>
+            
+              <p class="comment">a reference to a fill that is used to paint the enclosed regions of a graphical element. A fill value is exclusive with a fillColor value. If both are specified, the fill value is used. If none is specified, no fill is applied (i.e. the element becomes see-through).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fillColor</strong>
+            &nbsp;<a class="name-ref name-data-type" href="DC/Color.html">:Color</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">a color that is used to paint the enclosed regions of graphical element. A fillColor value is exclusive with a fill value. If both are specified, the fill value is used. If none is specified, no fill is applied (i.e. the element becomes see-through).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fillOpacity</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Real.html">:Real</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">a real number (>=0 and <=1) representing the opacity of the fill or fillColor used to paint a graphical element. A value of 0 means totally transparent, while a value of 1 means totally opaque. The default is 1.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">strokeWidth</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Real.html">:Real</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">a real number (>=0) representing the width of the stroke used to paint the outline of a graphical element. A value of 0 specifies no stroke is painted. The default is 1.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">strokeOpacity</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Real.html">:Real</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">a real number (>=0 and <=1) representing the opacity of the stroke used for a graphical element. A value of 0 means totally transparent, while a value of 1 means totally opaque. The default is 1.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">strokeColor</strong>
+            &nbsp;<a class="name-ref name-data-type" href="DC/Color.html">:Color</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">the color of the stroke used to paint the outline of a graphical element. The default is black (red=0, green=0, blue=0).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">strokeDashLength</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Real.html">:Real</a>
+            <span>[0..*]</span>
+            
+            
+            
+              <p class="comment">a list of real numbers specifying a pattern of alternating dash and gap lengths used in stroking the outline of a graphical element with the first one specifying a dash length. The size of the list is expected to be even. If the list is empty, the stroke is drawn solid. The default is empty list.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontSize</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Real.html">:Real</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">a real number (>=0) representing the size (in unit of length) of the font used to render a text element. The default is 10.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontName</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/String.html">:String</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">the name of the font used to render a text element (e.g. "Times New Roman", "Arial" or "Helvetica"). The default is "Arial".</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontColor</strong>
+            &nbsp;<a class="name-ref name-data-type" href="DC/Color.html">:Color</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">the color of the font used to render a text element. The default is black (red=0, green=0, blue=0).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontItalic</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">whether the font used to render a text element has an <i>italic</i> style. The default is false.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontBold</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">whether the font used to render a text element has a <b>bold</b> style. The default is false.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontUnderline</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">whether the font used to render a text element has an <b>underline</b> style. The default is false.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">fontStrikeThrough</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">whether the font used to render a text element has a <b>strike-through</b> style. The default is false.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

@@ -1,0 +1,322 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – MultiplicityElement</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">MultiplicityElement</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A multiplicity is a definition of an inclusive interval of non-negative integers beginning with a lower bound and ending with a (possibly infinite) upper bound. A MultiplicityElement embeds this information to specify the allowable cardinalities for an instantiation of the Element.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#MultiplicityElement">http://www.omg.org/spec/UML/20131001/UML.xmi#MultiplicityElement</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/CommonStructure.html">CommonStructure</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">MultiplicityElement</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul>
+    </section>
+    
+    <section>
+      <h2>Specializations</h2>
+      <ul class="list-unstyled">
+        
+          <li class="name-ref name-class"><a href="UML/StructuredClassifiers/ConnectorEnd.html">ConnectorEnd</a>
+          <li class="name-ref name-class"><a href="UML/Classification/Parameter.html">Parameter</a>
+          <li class="name-ref name-class"><a href="UML/Classification/StructuralFeature.html">StructuralFeature</a>
+          <li class="name-ref name-class"><a href="UML/Actions/Pin.html">Pin</a>
+          <li class="name-ref name-class"><a href="UML/Activities/Variable.html">Variable</a>    
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">isOrdered</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=false</span>
+            
+            
+            
+              <p class="comment">For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this MultiplicityElement are sequentially ordered.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isUnique</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=true</span>
+            
+            
+            
+              <p class="comment">For a multivalued multiplicity, this attributes specifies whether the values in an instantiation of this MultiplicityElement are unique.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">lower</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Integer.html">:Integer</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">The lower bound of the multiplicity interval.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">lowerValue</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Values/ValueSpecification.html">:ValueSpecification</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/CommonStructure/A_lowerValue_owningLower.html">A_lowerValue_owningLower</a>
+            
+              <p class="comment">The specification of the lower bound for this multiplicity.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">upper</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/UnlimitedNatural.html">:UnlimitedNatural</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">The upper bound of the multiplicity interval.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">upperValue</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Values/ValueSpecification.html">:ValueSpecification</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/CommonStructure/A_upperValue_owningUpper.html">A_upperValue_owningUpper</a>
+            
+              <p class="comment">The specification of the upper bound for this multiplicity.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">compatibleWith</strong>
+            <strong>(</strong>
+            
+              <strong>other</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/MultiplicityElement.html">:MultiplicityElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The operation compatibleWith takes another multiplicity as input. It returns true if the other multiplicity is wider than, or the same as, self.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">includesMultiplicity</strong>
+            <strong>(</strong>
+            
+              <strong>M</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/MultiplicityElement.html">:MultiplicityElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query includesMultiplicity() checks whether this multiplicity includes all the cardinalities allowed by the specified multiplicity.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">is</strong>
+            <strong>(</strong>
+            
+              <strong>lowerbound</strong>
+              &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Integer.html">:Integer</a>
+              
+              <strong>,</strong>
+              <strong>upperbound</strong>
+              &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/UnlimitedNatural.html">:UnlimitedNatural</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The operation is determines if the upper and lower bound of the ranges are the ones given.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isMultivalued</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isMultivalued() checks whether this multiplicity has an upper bound greater than one.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">lower</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Integer.html">:Integer</a>
+            
+              <p class="comment">The derived lower attribute must equal the lowerBound.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">lowerBound</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Integer.html">:Integer</a>
+            
+              <p class="comment">The query lowerBound() returns the lower bound of the multiplicity as an integer, which is the integerValue of lowerValue, if this is given, and 1 otherwise.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">upper</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/UnlimitedNatural.html">:UnlimitedNatural</a>
+            
+              <p class="comment">The derived upper attribute must equal the upperBound.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">upperBound</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/UnlimitedNatural.html">:UnlimitedNatural</a>
+            
+              <p class="comment">The query upperBound() returns the upper bound of the multiplicity for a bounded multiplicity as an unlimited natural, which is the unlimitedNaturalValue of upperValue, if given, and 1, otherwise.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

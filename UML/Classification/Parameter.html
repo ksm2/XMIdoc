@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – Parameter</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">Parameter</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A Parameter is a specification of an argument used to pass information into or out of an invocation of a BehavioralFeature.  Parameters can be treated as ConnectableElements within Collaborations.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#Parameter">http://www.omg.org/spec/UML/20131001/UML.xmi#Parameter</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/Classification.html">Classification</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">Parameter</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/CommonStructure/MultiplicityElement.html">MultiplicityElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/StructuredClassifiers/ConnectableElement.html">ConnectableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/TypedElement.html">TypedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/ParameterableElement.html">ParameterableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul>
+    </section>
+    
+    
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">default</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/String.html">:String</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">A String that represents a value to be used when no argument is supplied for the Parameter.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">defaultValue</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Values/ValueSpecification.html">:ValueSpecification</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_defaultValue_owningParameter.html">A_defaultValue_owningParameter</a>
+            
+              <p class="comment">Specifies a ValueSpecification that represents a value to be used when no argument is supplied for the Parameter.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">direction</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/Classification/ParameterDirectionKind.html">:ParameterDirectionKind</a>
+            <span>[1..1]</span>
+             
+              <a href="UML/Classification/ParameterDirectionKind/in.html">=in</a>
+            
+            
+            
+              <p class="comment">Indicates whether a parameter is being sent into or out of a behavioral element.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">effect</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/Classification/ParameterEffectKind.html">:ParameterEffectKind</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">Specifies the effect that executions of the owner of the Parameter have on objects passed in or out of the parameter.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isException</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=false</span>
+            
+            
+            
+              <p class="comment">Tells whether an output parameter may emit a value to the exclusion of the other outputs.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isStream</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=false</span>
+            
+            
+            
+              <p class="comment">Tells whether an input parameter may accept values while its behavior is executing, or whether an output parameter may post values while the behavior is executing.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">operation</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Operation.html">:Operation</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_ownedParameter_operation.html">A_ownedParameter_operation</a>
+            
+              <p class="comment">The Operation owning this parameter.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">parameterSet</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/ParameterSet.html">:ParameterSet</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_parameterSet_parameter.html">A_parameterSet_parameter</a>
+            
+              <p class="comment">The ParameterSets containing the parameter. See ParameterSet.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">default</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/String.html">:String</a>
+            
+              <p class="comment">Derivation for Parameter::/default</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

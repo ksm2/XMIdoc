@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – CallConcurrencyKind</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-enumeration">CallConcurrencyKind</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/SimpleClassifiers/Enumeration.html">Enumeration</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">CallConcurrencyKind is an Enumeration used to specify the semantics of concurrent calls to a BehavioralFeature.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#CallConcurrencyKind">http://www.omg.org/spec/UML/20131001/UML.xmi#CallConcurrencyKind</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/Classification.html">Classification</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-enumeration">CallConcurrencyKind</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Owned Literals</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <a class="name-ref name-enumeration-literal" href="UML/Classification/CallConcurrencyKind/sequential.html"><strong>sequential</strong></a>
+            
+              <p class="comment">No concurrency management mechanism is associated with the BehavioralFeature and, therefore, concurrency conflicts may occur. Instances that invoke a BehavioralFeature need to coordinate so that only one invocation to a target on any BehavioralFeature occurs at once.</p>
+            
+          </li>
+        
+          <li>
+            <a class="name-ref name-enumeration-literal" href="UML/Classification/CallConcurrencyKind/guarded.html"><strong>guarded</strong></a>
+            
+              <p class="comment">Multiple invocations of a BehavioralFeature that overlap in time may occur to one instance, but only one is allowed to commence. The others are blocked until the performance of the currently executing BehavioralFeature is complete. It is the responsibility of the system designer to ensure that deadlocks do not occur due to simultaneous blocking.</p>
+            
+          </li>
+        
+          <li>
+            <a class="name-ref name-enumeration-literal" href="UML/Classification/CallConcurrencyKind/concurrent.html"><strong>concurrent</strong></a>
+            
+              <p class="comment">Multiple invocations of a BehavioralFeature that overlap in time may occur to one instance and all of them may proceed concurrently.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

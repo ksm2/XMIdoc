@@ -1,0 +1,287 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – Transition</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">Transition</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A Transition represents an arc between exactly one source Vertex and exactly one Target vertex (the source and targets may be the same Vertex). It may form part of a compound transition, which takes the StateMachine from one steady State configuration to another, representing the full response of the StateMachine to an occurrence of an Event that triggered it.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#Transition">http://www.omg.org/spec/UML/20131001/UML.xmi#Transition</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/StateMachines.html">StateMachines</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">Transition</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul>
+    </section>
+    
+    <section>
+      <h2>Specializations</h2>
+      <ul class="list-unstyled">
+        
+          <li class="name-ref name-class"><a href="UML/StateMachines/ProtocolTransition.html">ProtocolTransition</a>    
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">container</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Region.html">:Region</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_transition_container.html">A_transition_container</a>
+            
+              <p class="comment">Designates the Region that owns this Transition.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">effect</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Behavior.html">:Behavior</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_effect_transition.html">A_effect_transition</a>
+            
+              <p class="comment">Specifies an optional behavior to be performed when the Transition fires.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">guard</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Constraint.html">:Constraint</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_guard_transition.html">A_guard_transition</a>
+            
+              <p class="comment">A guard is a Constraint that provides a fine-grained control over the firing of the Transition. The guard is evaluated when an Event occurrence is dispatched by the StateMachine. If the guard is true at that time, the Transition may be enabled, otherwise, it is disabled. Guards should be pure expressions without side effects. Guard expressions with side effects are ill formed.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">kind</strong>
+            &nbsp;<a class="name-ref name-enumeration" href="UML/StateMachines/TransitionKind.html">:TransitionKind</a>
+            <span>[1..1]</span>
+             
+              <a href="UML/StateMachines/TransitionKind/external.html">=external</a>
+            
+            
+            
+              <p class="comment">Indicates the precise type of the Transition.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">redefinedTransition</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Transition.html">:Transition</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_redefinedTransition_transition.html">A_redefinedTransition_transition</a>
+            
+              <p class="comment">The Transition that is redefined by this Transition.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">redefinitionContext</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Classifier.html">:Classifier</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_redefinitionContext_transition.html">A_redefinitionContext_transition</a>
+            
+              <p class="comment">References the Classifier in which context this element may be redefined.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">source</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_outgoing_source_vertex.html">A_outgoing_source_vertex</a>
+            
+              <p class="comment">Designates the originating Vertex (State or Pseudostate) of the Transition.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">target</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_incoming_target_vertex.html">A_incoming_target_vertex</a>
+            
+              <p class="comment">Designates the target Vertex that is reached when the Transition is taken.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">trigger</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Trigger.html">:Trigger</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_trigger_transition.html">A_trigger_transition</a>
+            
+              <p class="comment">Specifies the Triggers that may fire the transition.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">containingStateMachine</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/StateMachine.html">:StateMachine</a>
+            
+              <p class="comment">The query containingStateMachine() returns the StateMachine that contains the Transition either directly or transitively.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isConsistentWith</strong>
+            <strong>(</strong>
+            
+              <strong>redefiningElement</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/Classification/RedefinableElement.html">:RedefinableElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isConsistentWith() specifies that a redefining Transition is consistent with a redefined Transition provided that the redefining Transition has the following relation to the redefined Transition: A redefining Transition redefines all properties of the corresponding redefined Transition except the source State and the Trigger.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">redefinitionContext</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Classifier.html">:Classifier</a>
+            
+              <p class="comment">The redefinition context of a Transition is the nearest containing StateMachine.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

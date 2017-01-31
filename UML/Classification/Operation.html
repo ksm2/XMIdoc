@@ -1,0 +1,413 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – Operation</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">Operation</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">An Operation is a BehavioralFeature of a Classifier that specifies the name, type, parameters, and constraints for invoking an associated Behavior. An Operation may invoke both the execution of method behaviors as well as other behavioral responses. Operation specializes TemplateableElement in order to support specification of template operations and bound operations. Operation specializes ParameterableElement to specify that an operation can be exposed as a formal template parameter, and provided as an actual parameter in a binding of a template.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#Operation">http://www.omg.org/spec/UML/20131001/UML.xmi#Operation</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/Classification.html">Classification</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">Operation</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/CommonStructure/TemplateableElement.html">TemplateableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/CommonStructure/ParameterableElement.html">ParameterableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/Classification/BehavioralFeature.html">BehavioralFeature</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Classification/Feature.html">Feature</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul></ul>
+    </section>
+    
+    
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">bodyCondition</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Constraint.html">:Constraint</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_bodyCondition_bodyContext.html">A_bodyCondition_bodyContext</a>
+            
+              <p class="comment">An optional Constraint on the result values of an invocation of this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">class</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StructuredClassifiers/Class.html">:Class</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StructuredClassifiers/A_ownedOperation_class.html">A_ownedOperation_class</a>
+            
+              <p class="comment">The Class that owns this operation, if any.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">datatype</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/SimpleClassifiers/DataType.html">:DataType</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/SimpleClassifiers/A_ownedOperation_datatype.html">A_ownedOperation_datatype</a>
+            
+              <p class="comment">The DataType that owns this Operation, if any.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">interface</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/SimpleClassifiers/Interface.html">:Interface</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/SimpleClassifiers/A_ownedOperation_interface.html">A_ownedOperation_interface</a>
+            
+              <p class="comment">The Interface that owns this Operation, if any.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isOrdered</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">Specifies whether the return parameter is ordered or not, if present.  This information is derived from the return result for this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isQuery</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=false</span>
+            
+            
+            
+              <p class="comment">Specifies whether an execution of the BehavioralFeature leaves the state of the system unchanged (isQuery=true) or whether side effects may occur (isQuery=false).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isUnique</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">Specifies whether the return parameter is unique or not, if present. This information is derived from the return result for this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">lower</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Integer.html">:Integer</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">Specifies the lower multiplicity of the return parameter, if present. This information is derived from the return result for this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">ownedParameter</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Parameter.html">:Parameter</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_ownedParameter_operation.html">A_ownedParameter_operation</a>
+            
+              <p class="comment">The parameters owned by this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">postcondition</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Constraint.html">:Constraint</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_postcondition_postContext.html">A_postcondition_postContext</a>
+            
+              <p class="comment">An optional set of Constraints specifying the state of the system when the Operation is completed.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">precondition</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Constraint.html">:Constraint</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_precondition_preContext.html">A_precondition_preContext</a>
+            
+              <p class="comment">An optional set of Constraints on the state of the system when the Operation is invoked.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">raisedException</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Type.html">:Type</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_raisedException_operation.html">A_raisedException_operation</a>
+            
+              <p class="comment">The Types representing exceptions that may be raised during an invocation of this operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">redefinedOperation</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Operation.html">:Operation</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_redefinedOperation_operation.html">A_redefinedOperation_operation</a>
+            
+              <p class="comment">The Operations that are redefined by this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">templateParameter</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/OperationTemplateParameter.html">:OperationTemplateParameter</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_operation_templateParameter_parameteredElement.html">A_operation_templateParameter_parameteredElement</a>
+            
+              <p class="comment">The OperationTemplateParameter that exposes this element as a formal parameter.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">type</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Type.html">:Type</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Classification/A_type_operation.html">A_type_operation</a>
+            
+              <p class="comment">The return type of the operation, if present. This information is derived from the return result for this Operation.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">upper</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/UnlimitedNatural.html">:UnlimitedNatural</a>
+            <span>[0..1]</span>
+            
+            
+            
+              <p class="comment">The upper multiplicity of the return parameter, if present. This information is derived from the return result for this Operation.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">isConsistentWith</strong>
+            <strong>(</strong>
+            
+              <strong>redefiningElement</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/Classification/RedefinableElement.html">:RedefinableElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isConsistentWith() specifies, for any two Operations in a context in which redefinition is possible, whether redefinition would be consistent. A redefining operation is consistent with a redefined operation if
+it has the same number of owned parameters, and for each parameter the following holds:
+
+- Direction, ordering and uniqueness are the same.
+- The corresponding types are covariant, contravariant or invariant.
+- The multiplicities are compatible, depending on the parameter direction.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isOrdered</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">If this operation has a return parameter, isOrdered equals the value of isOrdered for that parameter. Otherwise isOrdered is false.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isUnique</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">If this operation has a return parameter, isUnique equals the value of isUnique for that parameter. Otherwise isUnique is true.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">lower</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Integer.html">:Integer</a>
+            
+              <p class="comment">If this operation has a return parameter, lower equals the value of lower for that parameter. Otherwise lower has no value.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">returnResult</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Parameter.html">:Parameter</a>
+            
+              <p class="comment">The query returnResult() returns the set containing the return parameter of the Operation if one exists, otherwise, it returns an empty set</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">type</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Type.html">:Type</a>
+            
+              <p class="comment">If this operation has a return parameter, type equals the value of type for that parameter. Otherwise type has no value.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">upper</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/UnlimitedNatural.html">:UnlimitedNatural</a>
+            
+              <p class="comment">If this operation has a return parameter, upper equals the value of upper for that parameter. Otherwise upper has no value.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

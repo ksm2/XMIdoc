@@ -1,0 +1,413 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – State</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">State</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A State models a situation during which some (usually implicit) invariant condition holds.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#State">http://www.omg.org/spec/UML/20131001/UML.xmi#State</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/StateMachines.html">StateMachines</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">State</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/StateMachines/Vertex.html">Vertex</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul>
+    </section>
+    
+    <section>
+      <h2>Specializations</h2>
+      <ul class="list-unstyled">
+        
+          <li class="name-ref name-class"><a href="UML/StateMachines/FinalState.html">FinalState</a>    
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">connection</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/ConnectionPointReference.html">:ConnectionPointReference</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_connection_state.html">A_connection_state</a>
+            
+              <p class="comment">The entry and exit connection points used in conjunction with this (submachine) State, i.e., as targets and sources, respectively, in the Region with the submachine State. A connection point reference references the corresponding definition of a connection point Pseudostate in the StateMachine referenced by the submachine State.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">connectionPoint</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Pseudostate.html">:Pseudostate</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_connectionPoint_state.html">A_connectionPoint_state</a>
+            
+              <p class="comment">The entry and exit Pseudostates of a composite State. These can only be entry or exit Pseudostates, and they must have different names. They can only be defined for composite States.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">deferrableTrigger</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Trigger.html">:Trigger</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_deferrableTrigger_state.html">A_deferrableTrigger_state</a>
+            
+              <p class="comment">A list of Triggers that are candidates to be retained by the StateMachine if they trigger no Transitions out of the State (not consumed). A deferred Trigger is retained until the StateMachine reaches a State configuration where it is no longer deferred.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">doActivity</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Behavior.html">:Behavior</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_doActivity_state.html">A_doActivity_state</a>
+            
+              <p class="comment">An optional Behavior that is executed while being in the State. The execution starts when this State is entered, and ceases either by itself when done, or when the State is exited, whichever comes first.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">entry</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Behavior.html">:Behavior</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_entry_state.html">A_entry_state</a>
+            
+              <p class="comment">An optional Behavior that is executed whenever this State is entered regardless of the Transition taken to reach the State. If defined, entry Behaviors are always executed to completion prior to any internal Behavior or Transitions performed within the State.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">exit</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonBehavior/Behavior.html">:Behavior</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_exit_state.html">A_exit_state</a>
+            
+              <p class="comment">An optional Behavior that is executed whenever this State is exited regardless of which Transition was taken out of the State. If defined, exit Behaviors are always executed to completion only after all internal and transition Behaviors have completed execution.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isComposite</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">A state with isComposite=true is said to be a composite State. A composite State is a State that contains at least one Region.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isOrthogonal</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">A State with isOrthogonal=true is said to be an orthogonal composite State An orthogonal composite State contains two or more Regions.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isSimple</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">A State with isSimple=true is said to be a simple State A simple State does not have any Regions and it does not refer to any submachine StateMachine.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isSubmachineState</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+            
+            
+              <p class="comment">A State with isSubmachineState=true is said to be a submachine State Such a State refers to another StateMachine(submachine).</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">redefinedState</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/State.html">:State</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_redefinedState_state.html">A_redefinedState_state</a>
+            
+              <p class="comment">The State of which this State is a redefinition.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">redefinitionContext</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Classifier.html">:Classifier</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_redefinitionContext_state.html">A_redefinitionContext_state</a>
+            
+              <p class="comment">References the Classifier in which context this element may be redefined.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">region</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Region.html">:Region</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_region_state.html">A_region_state</a>
+            
+              <p class="comment">The Regions owned directly by the State.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">stateInvariant</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Constraint.html">:Constraint</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_stateInvariant_owningState.html">A_stateInvariant_owningState</a>
+            
+              <p class="comment">Specifies conditions that are always true when this State is the current State. In ProtocolStateMachines state invariants are additional conditions to the preconditions of the outgoing Transitions, and to the postcondition of the incoming Transitions.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">submachine</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/StateMachine.html">:StateMachine</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_submachineState_submachine.html">A_submachineState_submachine</a>
+            
+              <p class="comment">The StateMachine that is to be inserted in place of the (submachine) State.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">containingStateMachine</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/StateMachine.html">:StateMachine</a>
+            
+              <p class="comment">The query containingStateMachine() returns the StateMachine that contains the State either directly or transitively.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isComposite</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">A composite State is a State with at least one Region.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isConsistentWith</strong>
+            <strong>(</strong>
+            
+              <strong>redefiningElement</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/Classification/RedefinableElement.html">:RedefinableElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isConsistentWith() specifies that a redefining State is consistent with a redefined State provided that the redefining State is an extension of the redefined State A simple State can be redefined (extended) to become a composite State (by adding one or more Regions) and a composite State can be redefined (extended) by adding Regions and by adding Vertices, States, and Transitions to inherited Regions. All States may add or replace entry, exit, and 'doActivity' Behaviors.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isOrthogonal</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">An orthogonal State is a composite state with at least 2 regions.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isRedefinitionContextValid</strong>
+            <strong>(</strong>
+            
+              <strong>redefinedElement</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/Classification/RedefinableElement.html">:RedefinableElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isRedefinitionContextValid() specifies whether the redefinition contexts of a State are properly related to the redefinition contexts of the specified State to allow this element to redefine the other. This means that the containing Region of a redefining State must redefine the containing Region of the redefined State.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isSimple</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">A simple State is a State without any regions.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isSubmachineState</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">Only submachine State references another StateMachine.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">redefinitionContext</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Classification/Classifier.html">:Classifier</a>
+            
+              <p class="comment">The redefinition context of a State is the nearest containing StateMachine.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

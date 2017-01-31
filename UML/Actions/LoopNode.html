@@ -1,0 +1,273 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – LoopNode</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">LoopNode</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">A LoopNode is a StructuredActivityNode that represents an iterative loop with setup, test, and body sections.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#LoopNode">http://www.omg.org/spec/UML/20131001/UML.xmi#LoopNode</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/Actions.html">Actions</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">LoopNode</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/Actions/StructuredActivityNode.html">StructuredActivityNode</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/Activities/ActivityGroup.html">ActivityGroup</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/Actions/Action.html">Action</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Activities/ExecutableNode.html">ExecutableNode</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Activities/ActivityNode.html">ActivityNode</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul></ul></ul></ul></ul>
+    </section>
+    
+    
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">bodyOutput</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Actions/OutputPin.html">:OutputPin</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_bodyOutput_loopNode.html">A_bodyOutput_loopNode</a>
+            
+              <p class="comment">The OutputPins on Actions within the bodyPart, the values of which are moved to the loopVariable OutputPins after the completion of each execution of the bodyPart, before the next iteration of the loop begins or before the loop exits.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">bodyPart</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Activities/ExecutableNode.html">:ExecutableNode</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_bodyPart_loopNode.html">A_bodyPart_loopNode</a>
+            
+              <p class="comment">The set of ExecutableNodes that perform the repetitive computations of the loop. The bodyPart is executed as long as the test section produces a true value.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">decider</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Actions/OutputPin.html">:OutputPin</a>
+            <span>[1..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_decider_loopNode.html">A_decider_loopNode</a>
+            
+              <p class="comment">An OutputPin on an Action in the test section whose Boolean value determines whether to continue executing the loop bodyPart.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">isTestedFirst</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            <span>[1..1]</span>
+            
+              <span>=false</span>
+            
+            
+            
+              <p class="comment">If true, the test is performed before the first execution of the bodyPart. If false, the bodyPart is executed once before the test is performed.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">loopVariable</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Actions/OutputPin.html">:OutputPin</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_loopVariable_loopNode.html">A_loopVariable_loopNode</a>
+            
+              <p class="comment">A list of OutputPins that hold the values of the loop variables during an execution of the loop. When the test fails, the values are moved to the result OutputPins of the loop.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">loopVariableInput</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Actions/InputPin.html">:InputPin</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_loopVariableInput_loopNode.html">A_loopVariableInput_loopNode</a>
+            
+              <p class="comment">A list of InputPins whose values are moved into the loopVariable Pins before the first iteration of the loop.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">result</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Actions/OutputPin.html">:OutputPin</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_result_loopNode.html">A_result_loopNode</a>
+            
+              <p class="comment">A list of OutputPins that receive the loopVariable values after the last iteration of the loop and constitute the output of the LoopNode.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">setupPart</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Activities/ExecutableNode.html">:ExecutableNode</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_setupPart_loopNode.html">A_setupPart_loopNode</a>
+            
+              <p class="comment">The set of ExecutableNodes executed before the first iteration of the loop, in order to initialize values or perform other setup computations.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">test</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Activities/ExecutableNode.html">:ExecutableNode</a>
+            <span>[1..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/Actions/A_test_loopNode.html">A_test_loopNode</a>
+            
+              <p class="comment">The set of ExecutableNodes executed in order to provide the test result for the loop.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">allActions</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Actions/Action.html">:Action</a>
+            
+              <p class="comment">Return only this LoopNode. This prevents Actions within the LoopNode from having their OutputPins used as bodyOutputs or decider Pins in containing LoopNodes or ConditionalNodes.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">sourceNodes</strong>
+            <strong>(</strong>
+            
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/Activities/ActivityNode.html">:ActivityNode</a>
+            
+              <p class="comment">Return the loopVariable OutputPins in addition to other source nodes for the LoopNode as a StructuredActivityNode.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

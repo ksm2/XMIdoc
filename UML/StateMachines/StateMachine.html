@@ -1,0 +1,309 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – StateMachine</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">StateMachine</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">StateMachines can be used to express event-driven behaviors of parts of a system. Behavior is modeled as a traversal of a graph of Vertices interconnected by one or more joined Transition arcs that are triggered by the dispatching of successive Event occurrences. During this traversal, the StateMachine may execute a sequence of Behaviors associated with various elements of the StateMachine.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#StateMachine">http://www.omg.org/spec/UML/20131001/UML.xmi#StateMachine</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML.html">UML</a>
+          </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="UML/StateMachines.html">StateMachines</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">StateMachine</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    <section>
+      <h2>Generalizations</h2>
+      <ul><li class="name-ref name-class"><a href="UML/CommonBehavior/Behavior.html">Behavior</a></li>
+<ul><li class="name-ref name-class"><a href="UML/StructuredClassifiers/Class.html">Class</a></li>
+<ul><li class="name-ref name-class"><a href="UML/SimpleClassifiers/BehavioredClassifier.html">BehavioredClassifier</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Classification/Classifier.html">Classifier</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/Type.html">Type</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/PackageableElement.html">PackageableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/ParameterableElement.html">ParameterableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/TemplateableElement.html">TemplateableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul></ul><li class="name-ref name-class"><a href="UML/StructuredClassifiers/EncapsulatedClassifier.html">EncapsulatedClassifier</a></li>
+<ul><li class="name-ref name-class"><a href="UML/StructuredClassifiers/StructuredClassifier.html">StructuredClassifier</a></li>
+<ul><li class="name-ref name-class"><a href="UML/Classification/Classifier.html">Classifier</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Namespace.html">Namespace</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/Type.html">Type</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/PackageableElement.html">PackageableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/ParameterableElement.html">ParameterableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul><li class="name-ref name-class"><a href="UML/CommonStructure/TemplateableElement.html">TemplateableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul><li class="name-ref name-class"><a href="UML/Classification/RedefinableElement.html">RedefinableElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/NamedElement.html">NamedElement</a></li>
+<ul><li class="name-ref name-class"><a href="UML/CommonStructure/Element.html">Element</a></li>
+</ul></ul></ul></ul></ul></ul></ul></ul>
+    </section>
+    
+    <section>
+      <h2>Specializations</h2>
+      <ul class="list-unstyled">
+        
+          <li class="name-ref name-class"><a href="UML/StateMachines/ProtocolStateMachine.html">ProtocolStateMachine</a>    
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">connectionPoint</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Pseudostate.html">:Pseudostate</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_connectionPoint_stateMachine.html">A_connectionPoint_stateMachine</a>
+            
+              <p class="comment">The connection points defined for this StateMachine. They represent the interface of the StateMachine when used as part of submachine State</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">extendedStateMachine</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/StateMachine.html">:StateMachine</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_extendedStateMachine_stateMachine.html">A_extendedStateMachine_stateMachine</a>
+            
+              <p class="comment">The StateMachines of which this is an extension.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">region</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Region.html">:Region</a>
+            <span>[1..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_region_stateMachine.html">A_region_stateMachine</a>
+            
+              <p class="comment">The Regions owned directly by the StateMachine.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">submachineState</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/State.html">:State</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="UML/StateMachines/A_submachineState_submachine.html">A_submachineState_submachine</a>
+            
+              <p class="comment">References the submachine(s) in case of a submachine State. Multiple machines are referenced in case of a concurrent State.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    <section>
+      <h2>Owned Operations</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-operation">LCA</strong>
+            <strong>(</strong>
+            
+              <strong>s1</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+              
+              <strong>,</strong>
+              <strong>s2</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Region.html">:Region</a>
+            
+              <p class="comment">The operation LCA(s1,s2) returns the Region that is the least common ancestor of Vertices s1 and s2, based on the StateMachine containment hierarchy.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">ancestor</strong>
+            <strong>(</strong>
+            
+              <strong>s1</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+              
+              <strong>,</strong>
+              <strong>s2</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query ancestor(s1, s2) checks whether Vertex s2 is an ancestor of Vertex s1.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isConsistentWith</strong>
+            <strong>(</strong>
+            
+              <strong>redefiningElement</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/Classification/RedefinableElement.html">:RedefinableElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isConsistentWith() specifies that a redefining StateMachine is consistent with a redefined StateMachine provided that the redefining StateMachine is an extension of the redefined StateMachine : Regions are inherited and Regions can be added, inherited Regions can be redefined. In case of multiple redefining StateMachine, extension implies that the redefining StateMachine gets orthogonal Regions for each of the redefined StateMachine.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">isRedefinitionContextValid</strong>
+            <strong>(</strong>
+            
+              <strong>redefinedElement</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/Classification/RedefinableElement.html">:RedefinableElement</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-primitive-type" href="PrimitiveTypes/Boolean.html">:Boolean</a>
+            
+              <p class="comment">The query isRedefinitionContextValid() specifies whether the redefinition context of a StateMachine is properly related to the redefinition contexts of the specified StateMachine to allow this element to redefine the other. The context Classifier of a redefining StateMachine must redefine the context Classifier of the redefined StateMachine.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-operation">LCAState</strong>
+            <strong>(</strong>
+            
+              <strong>v1</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+              
+              <strong>,</strong>
+              <strong>v2</strong>
+              &nbsp;<a class="name-ref name-class" href="UML/StateMachines/Vertex.html">:Vertex</a>
+              
+              
+            <strong>)</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/StateMachines/State.html">:State</a>
+            
+              <p class="comment">This utility funciton is like the LCA, except that it returns the nearest composite State that contains both input Vertices.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  

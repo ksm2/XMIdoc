@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/XMIdoc/">
+  <title>Metagram – DiagramElement</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script async src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Metagram</a>
+      </div>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="overview.html">Overview</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="Petrinet.html">Petrinet</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="MOF.html">MOF</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PrimitiveTypes.html">PrimitiveTypes</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UML.html">UML</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="UMLDI.html">UMLDI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="XMI.html">XMI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DC.html">DC</a>
+          </li>
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="DI.html">DI</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="DG.html">DG</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    
+    <header>
+      <h1 class="name name-class">DiagramElement</h1>
+      <p>
+      
+        <strong>instance of <a href="UML/StructuredClassifiers/Class.html">Class</strong></a> from UML (v2.5)
+      
+      </p>
+      
+        <p class="lead">DiagramElement is the abstract super type of all elements in diagrams, including diagrams themselves. When contained in a diagram, diagram elements are laid out relative to the diagram’s origin.</p>
+      
+      <p class="lead">HRef: <a class="model-id" href="overview.html#DiagramElement">http://www.omg.org/spec/DD/20131001/DI.xmi#DiagramElement</a></p>
+      
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        
+          <li class="breadcrumb-item">
+            <a class="name-ref name-package" href="DI.html">DI</a>
+          </li>
+        
+        <li class="breadcrumb-item active">
+          <span class="name-ref name-class">DiagramElement</span>
+        </li>
+      </ol>
+    </header>
+    <main>
+      
+    
+    
+    <section>
+      <h2>Specializations</h2>
+      <ul class="list-unstyled">
+        
+          <li class="name-ref name-class"><a href="DI/Shape.html">Shape</a>
+          <li class="name-ref name-class"><a href="DI/Edge.html">Edge</a>
+          <li class="name-ref name-class"><a href="UMLDI/UMLDiagramElement.html">UMLDiagramElement</a>    
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Owned Attributes</h2>
+      <ul class="list-unstyled">
+        
+          <li>
+            <strong class="name-ref name-property">modelElement</strong>
+            &nbsp;<a class="name-ref name-class" href="UML/CommonStructure/Element.html">:Element</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="DI/A_modelElement_diagramElement.html">A_modelElement_diagramElement</a>
+            
+              <p class="comment">a reference to a depicted model element, which can be any MOF-based element</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">owningElement</strong>
+            &nbsp;<a class="name-ref name-class" href="DI/DiagramElement.html">:DiagramElement</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="DI/A_ownedElement_owningElement.html">A_ownedElement_owningElement</a>
+            
+              <p class="comment">a reference to the diagram element that directly owns this diagram element.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">ownedElement</strong>
+            &nbsp;<a class="name-ref name-class" href="DI/DiagramElement.html">:DiagramElement</a>
+            <span>[0..*]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="DI/A_ownedElement_owningElement.html">A_ownedElement_owningElement</a>
+            
+              <p class="comment">a collection of diagram elements that are directly owned by this diagram element.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">localStyle</strong>
+            &nbsp;<a class="name-ref name-class" href="DI/Style.html">:Style</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="DI/A_localStyle_styledElement.html">A_localStyle_styledElement</a>
+            
+              <p class="comment">a reference to an optional locally-owned style for this diagram element.</p>
+            
+          </li>
+        
+          <li>
+            <strong class="name-ref name-property">sharedStyle</strong>
+            &nbsp;<a class="name-ref name-class" href="DI/Style.html">:Style</a>
+            <span>[0..1]</span>
+            
+            &nbsp;<a class="name-ref name-association" href="DI/A_sharedStyle_styledElement.html">A_sharedStyle_styledElement</a>
+            
+              <p class="comment">a reference to an optional shared style element for this diagram element.</p>
+            
+          </li>
+        
+      </ul>
+    </section>
+    
+  
+    </main>
+  
+  </div>
+</body>
+</html>
+  
